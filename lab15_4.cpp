@@ -18,4 +18,14 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+void shuffle(int &a,int &b,int &c,int &d){
+	int Bath[4] = {a,b,c,d};
+	for(int i = 0;i < 4;i++){
+	    int random = rand() % (4-i) + i;
+		swap(Bath[i],Bath[random]);
+	}
+	a = Bath[0];
+	b = Bath[1];
+	c = Bath[2];
+	d = Bath[3];
+}
